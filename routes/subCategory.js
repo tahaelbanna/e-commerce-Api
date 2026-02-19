@@ -2,7 +2,6 @@ const express = require('express');
 const subCategoryController = require('../controllers/subCategory');
 const authController = require('../controllers/auth');
 
-// mergeParams allows us to get params from another route
 const router = express.Router({ mergeParams: true });
 const Validators = require('../utils/validators/subCategory');
 

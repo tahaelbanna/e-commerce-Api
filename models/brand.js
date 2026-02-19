@@ -27,12 +27,12 @@ const setImageUrl = (doc) => {
     doc.imageUrl = `${process.env.BASE_URL}/categories/${doc.imageUrl}`;
 };
 
-// for findAll, findOne, update
+
 brandSchema.post('init', (doc) => {
     setImageUrl(doc);
 });
 
-// for createOne
+
 brandSchema.post('save', (doc) => {
     setImageUrl(doc);
 });

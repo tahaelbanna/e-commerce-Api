@@ -102,18 +102,14 @@ exports.updateDeliveryStatus = asyncHandler(async (req, res, next) => {
 // @route   POST /Api/v1/orders/checkout-session
 // @access  private
 exports.checkOutSession = asyncHandler(async (req, res, next) => {
-    // 1. Get cart depend on cartId
     const cart = await Cart.findOne({ user: req.user._id });
     if (!cart) {
         return next(new apiError('this cart Not found', 404));
     }
-    // 2. Get order price depend on cart price "Check if coupon applied"
     const cartPrice = cart.totalPriceAfterDiscount
         ? cart.totalPriceAfterDiscount
         : cart.totalPrice;
     const totalOrderPrice = cartPrice;
-
-    // 3. Create stripe checkout session
     const session = await stripe.checkout.sessions.create({
         line_items: [
             {
@@ -138,8 +134,6 @@ exports.checkOutSession = asyncHandler(async (req, res, next) => {
             shippingAddress_phone: req.body.shippingAddress.phone,
         },
     });
-
-    // 4. send session to response
     res.status(200).json({
         status: 'success',
         session,
@@ -200,7 +194,7 @@ exports.webhookCheckout = asyncHandler(async (req, res, next) => {
             );
         } catch (err) {
             console.log(
-                `⚠️ Webhook signature verification failed.`,
+                `Webhook signature verification failed.`,
                 err.message
             );
             return res.status(400).send(`Webhook Error: ${err.message}`);

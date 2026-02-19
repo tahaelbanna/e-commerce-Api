@@ -77,10 +77,8 @@ const productSchema = new Schema(
         toObject: { virtuals: true },
     }
 );
-// mongoose middleWare
 productSchema.pre(/^find/, function (next) {
     this.populate({ path: 'category', select: 'name -_id' });
-    // next();
 });
 
 productSchema.virtual('reviews', {
@@ -102,12 +100,10 @@ const setImageUrl = (doc) => {
     }
 };
 
-// for findAll, findOne, update
 productSchema.post('init', (doc) => {
     setImageUrl(doc);
 });
 
-// for createOne
 productSchema.post('save', (doc) => {
     setImageUrl(doc);
 });

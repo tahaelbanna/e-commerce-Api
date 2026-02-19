@@ -3,7 +3,6 @@ const couponController = require('../controllers/coupon');
 const authController = require('../controllers/auth');
 
 const router = express.Router();
-// const Validators = require('../utils/validators/coupon');
 
 router
     .route('/')

@@ -9,7 +9,6 @@ exports.deleteOne = (Model) =>
         if (!document) {
             return next(new apiError(`no document found for id: ${id}`, 404));
         }
-        // for trigger mongoose middle ware 'deleteOne'
         await document.deleteOne();
         res.status(204).send();
     });
@@ -28,7 +27,6 @@ exports.updateOne = (Model) =>
                 new apiError(`no such ${Model} for id: ${req.params.id}`, 404)
             );
         }
-        // for trigger mongoose middle ware 'save'
         await document.save();
         res.json({
             data: document,
@@ -59,7 +57,6 @@ exports.getOne = (Model, options) =>
 
 exports.getAll = (Model) =>
     asyncHandler(async (req, res) => {
-        // nested route
         let filterParams = {};
         if (req.filterObj) {
             filterParams = req.filterObj;

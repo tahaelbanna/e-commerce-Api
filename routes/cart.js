@@ -3,7 +3,6 @@ const cartController = require('../controllers/cart');
 const authController = require('../controllers/auth');
 
 const router = express.Router();
-// const Validators = require('../utils/validators/cart');
 
 router.put(
     '/applyCoupon',

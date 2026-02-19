@@ -5,8 +5,6 @@ const apiError = require('../utils/apiError');
 // @route   POST /Api/v1/WshList
 // @access  private
 exports.addWshList = asyncHandler(async (req, res) => {
-    // addToSet: provided by mongodb to add something in a unique list
-    // if that something is already exists it dosen't return error
     const user = await User.findByIdAndUpdate(
         req.user._id,
         {
@@ -27,8 +25,6 @@ exports.addWshList = asyncHandler(async (req, res) => {
 // @route   DELETE /Api/v1/WshList/:productId
 // @access  private
 exports.deleteWishList = asyncHandler(async (req, res, next) => {
-    // pull: provided by mongodb to remove something from a unique list
-    // if that something is already not exists it dosen't return error
     const user = await User.findOneAndUpdate(
         {
             _id: req.user._id,
@@ -41,11 +37,9 @@ exports.deleteWishList = asyncHandler(async (req, res, next) => {
             new: true,
         }
     );
-
     if (!user) {
         return next(new apiError('Unauthorized Access', 404));
     }
-
     res.status(201).json({
         status: 'success',
         message: 'product removed from wish list successfully',

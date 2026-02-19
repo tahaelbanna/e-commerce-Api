@@ -24,7 +24,6 @@ exports.addToCart = asyncHandler(async (req, res, next) => {
         return next(new apiError('Product not found', 404));
     }
     let cart = await Cart.findOne({ user: req.user._id });
-
     if (!cart) {
         cart = new Cart({
             user: req.user._id,
@@ -127,7 +126,6 @@ exports.updateProductQuantity = asyncHandler(async (req, res, next) => {
     if (!cart) {
         return next(new apiError('add products to create a cart!', 404));
     }
-
     const productIndex = cart.cartItems.findIndex(
         (item) => item._id.toString() === req.params.itemId.toString()
     );

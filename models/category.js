@@ -17,7 +17,7 @@ const categorySchema = new Schema(
         },
         imageUrl: {
             type: String,
-            // required: [true, 'image is required'],
+            required: [true, 'image is required'],
         },
     },
     { timestamps: true }
@@ -27,12 +27,12 @@ const setImageUrl = (doc) => {
     doc.imageUrl = `${process.env.BASE_URL}/categories/${doc.imageUrl}`;
 };
 
-// for findAll, findOne, update
+
 categorySchema.post('init', (doc) => {
     setImageUrl(doc);
 });
 
-// for createOne
+
 categorySchema.post('save', (doc) => {
     setImageUrl(doc);
 });
