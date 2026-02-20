@@ -51,3 +51,16 @@ EMAIL_FROM=noreply@yourdomain.com
 # Stripe
 STRIPE_SECRET=sk_test_your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
+
+
+## 🧪 API Testing (Postman)
+
+To make testing easier, a complete **Postman Collection** is included in this repository. It contains all the configured endpoints, required payloads, and authorization headers.
+
+### How to use it:
+1. Open [Postman](https://www.postman.com/).
+2. Click on **Import** (top left corner).
+3. Select the `e-commerce-api-collection.json`
+4. Set up your environment variables in Postman (e.g., `{{baseURL}} = http://localhost:3000/Api/v1`).
+5. You're ready to test! (Start by registering a new user or logging in to get your JWT).
+
