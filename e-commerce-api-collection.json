@@ -1,0 +1,2596 @@
+{
+  "info": {
+    "_postman_id": "6728adee-08b3-4e0e-b79d-0f37622896c2",
+    "name": "ecommerse",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51794869",
+    "_collection_link": "https://go.postman.co/collection/51794869-6728adee-08b3-4e0e-b79d-0f37622896c2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "category",
+      "item": [
+        {
+          "name": "create category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "produc1232146565reew",
+                  "type": "text",
+                  "uuid": "097490fb-45d2-467b-892e-0b36a0495639"
+                },
+                {
+                  "key": "imageUrl",
+                  "type": "file",
+                  "uuid": "d48a35f3-ebd4-4b28-b85f-f26220a32686",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List some categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List one category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories/69763746c96fe9ed2ee5ce0a",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories",
+                "69763746c96fe9ed2ee5ce0a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Rental 00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories/69763196a87ef6262a236592",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories",
+                "69763196a87ef6262a236592"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Rental 1\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories/69763750c96fe9ed2ee5ce0c",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories",
+                "69763750c96fe9ed2ee5ce0c"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "sub category",
+      "item": [
+        {
+          "name": "create sub category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"LOL\",\r\n    \"category\": \"69763736c96fe9ed2ee5ce06\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/subcategories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "subcategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some sub categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/subcategories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "subcategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list sub category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/subcategories/69777f5a503187ab48dabe36",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "subcategories",
+                "69777f5a503187ab48dabe36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete sub category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Knife\",\r\n    \"category\": \"6976373dc96fe9ed2ee5ce08\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/subcategories/697785986b2f3f275bb1cb23",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "subcategories",
+                "697785986b2f3f275bb1cb23"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "category/sub",
+      "item": [
+        {
+          "name": "list subs for specific category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories/69763736c96fe9ed2ee5ce06/subcategories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories",
+                "69763736c96fe9ed2ee5ce06",
+                "subcategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create sub with only name",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Stairs\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/categories/69763196a87ef6262a236592/subcategories",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "categories",
+                "69763196a87ef6262a236592",
+                "subcategories"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Brand",
+      "item": [
+        {
+          "name": "create brand",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "newBrand1",
+                  "type": "text",
+                  "uuid": "85e95537-b63b-4ba8-bc77-336f12a23cc5"
+                },
+                {
+                  "key": "imageUrl",
+                  "type": "file",
+                  "uuid": "a97f75d1-348c-4c43-a707-9cdb26ee01a0",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/brands",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some brands",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/brands",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list one brand",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/brands/6977b08ff065df9f498994c0",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "brands",
+                "6977b08ff065df9f498994c0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update brand",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "newBrandii",
+                  "type": "text",
+                  "uuid": "ec7033fb-438d-4108-9d09-b5e793c2a694"
+                },
+                {
+                  "key": "imageUrl",
+                  "type": "file",
+                  "uuid": "314d9f79-f7e7-43c6-95a4-0c80bf25fac9",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/brands/697e1530fd7b1480f0cb1466",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "brands",
+                "697e1530fd7b1480f0cb1466"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete brand",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/brands/6977b095f065df9f498994c2",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "brands",
+                "6977b095f065df9f498994c2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "create Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "newProduct",
+                  "type": "text",
+                  "uuid": "75155ef5-8357-4b02-801a-ba80466526a4"
+                },
+                {
+                  "key": "description",
+                  "value": "newProductnewProductnewProductnewProductnewProductnewProductnewProductnewProductnewProduct",
+                  "type": "text",
+                  "uuid": "17b2c80b-5b02-440b-b0d1-1f0979d0fccb"
+                },
+                {
+                  "key": "quantity",
+                  "value": "12",
+                  "type": "text",
+                  "uuid": "fea3cb08-7991-489c-8fb4-b31eaa44c4ae"
+                },
+                {
+                  "key": "price",
+                  "value": "12",
+                  "type": "text",
+                  "uuid": "910ac5e8-57f8-48b4-a849-272c26a4f935"
+                },
+                {
+                  "key": "imageCover",
+                  "type": "file",
+                  "uuid": "141c91d7-5845-49fa-8d4b-ea4af0673403",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
+                },
+                {
+                  "key": "images",
+                  "type": "file",
+                  "uuid": "b9be160e-38d0-47cf-a379-1a10ea80f299",
+                  "src": [
+                    "/C:/Taha Elbanna/My/Taha Elbanna-photo.jpg",
+                    "/C:/Taha Elbanna/My/uni card.jpg",
+                    "/C:/Taha Elbanna/My/بطاقة.jpg"
+                  ]
+                },
+                {
+                  "key": "category",
+                  "value": "697e302b264e32baf473ba69",
+                  "type": "text",
+                  "uuid": "7d09aee2-6d70-4ff8-b10e-7d100a8cb1ac"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "title,price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "price[gte]",
+                  "value": "50",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "keyword",
+                  "value": "men",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list one product",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/6978dbf950dd35e758828879",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "6978dbf950dd35e758828879"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "images",
+                  "type": "file",
+                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/697e421396ad92bf94f94d90",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "697e421396ad92bf94f94d90"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/6978b12516714338fbf1b6e1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "6978b12516714338fbf1b6e1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User (pubic)",
+      "item": [
+        {
+          "name": "get Logged user",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/getMe",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "getMe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Logged User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "profileImage",
+                  "type": "file",
+                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
+                  "disabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "teto",
+                  "type": "text",
+                  "uuid": "ea33c738-a09d-4c72-bb2a-360eda07d6bc"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/updateMe",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "updateMe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Logged User password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"password\": \"123456789\",\r\n    \"confirmPassword\": \"123456789\",\r\n    \"currentPassword\": \"12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/changePassword",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "changePassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deactivate Logged User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/deActiveMe",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "deActiveMe"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User (Admin)",
+      "item": [
+        {
+          "name": "create User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Taha",
+                  "type": "text",
+                  "uuid": "75155ef5-8357-4b02-801a-ba80466526a4"
+                },
+                {
+                  "key": "email",
+                  "value": "taha4@gmail.com",
+                  "type": "text",
+                  "uuid": "17b2c80b-5b02-440b-b0d1-1f0979d0fccb"
+                },
+                {
+                  "key": "password",
+                  "value": "@taha12@!!!",
+                  "type": "text",
+                  "uuid": "fea3cb08-7991-489c-8fb4-b31eaa44c4ae"
+                },
+                {
+                  "key": "phoneNumber",
+                  "value": "+201004860225",
+                  "type": "text",
+                  "uuid": "910ac5e8-57f8-48b4-a849-272c26a4f935"
+                },
+                {
+                  "key": "profileImage",
+                  "type": "file",
+                  "uuid": "4b13bb4b-242e-4098-a215-7458d3d0e546",
+                  "src": "/C:/Taha Elbanna/My/uni card.jpg"
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": "@taha12@!!!",
+                  "type": "text",
+                  "uuid": "1490aa1e-c1d8-4cbe-bc61-73c51de0e006"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some Users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "title,price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "price[gte]",
+                  "value": "50",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "keyword",
+                  "value": "men",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list one User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/697f59252b01fe9ef8ffa983",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "697f59252b01fe9ef8ffa983"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "profileImage",
+                  "type": "file",
+                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
+                  "disabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "teto",
+                  "type": "text",
+                  "uuid": "ea33c738-a09d-4c72-bb2a-360eda07d6bc"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/697f704591f3388bd2698e1b",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "697f704591f3388bd2698e1b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update User password",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"password\": \"tahaElbanna1\",\r\n    \"confirmPassword\": \"tahaElbanna1\",\r\n    \"currentPassword\": \"tahaElbanna\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/changePassword/697fca07826a140f232e55e6",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "changePassword",
+                "697fca07826a140f232e55e6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/users/6978b12516714338fbf1b6e1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "users",
+                "6978b12516714338fbf1b6e1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "authentications",
+      "item": [
+        {
+          "name": "Signup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"pass1234\",\r\n    \"confirmPassword\": \"pass1234\",\r\n    \"phoneNumber\": \"+201004860225\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/auth/signup",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"pass1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/auth/login",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forget Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"elbannataha@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/auth/forgotPassword",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "auth",
+                "forgotPassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verify reset code",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"resetCode\": \"249322\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/auth/verifyResetCode",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "auth",
+                "verifyResetCode"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"elbannataha@gmail.com\",\r\n    \"newPassword\": \"12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/auth/resetPassword",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "auth",
+                "resetPassword"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Review",
+      "item": [
+        {
+          "name": "create Review",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "not good & not bad",
+                  "type": "text",
+                  "uuid": "a7404270-e9c7-413a-bede-11ac22f30f8a"
+                },
+                {
+                  "key": "rating",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "1d7cfa67-4d66-48ad-a35c-f13499923a36"
+                },
+                {
+                  "key": "user",
+                  "value": "6984f2fcac0f5f1f75c898a1",
+                  "type": "text",
+                  "uuid": "d102276c-d474-43c3-9c19-4a612feff472"
+                },
+                {
+                  "key": "product",
+                  "value": "6978dbf950dd35e758828879",
+                  "type": "text",
+                  "uuid": "6262957c-5b60-44eb-aac8-cb2b43fb70ee"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/reviews",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/reviews",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "reviews"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fields",
+                  "value": "title,price",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "price[gte]",
+                  "value": "50",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "keyword",
+                  "value": "men",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list one review",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/reviews/6984f3e5584eda8e9d240b40",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "reviews",
+                "6984f3e5584eda8e9d240b40"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete review",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Mens Casual Premium Slim Fit T-Shirts\",\r\n    \"slug\": \"mens-casual-premium-slim-fit-t-shirts\",\r\n    \"quantity\": 20,\r\n    \"sold\": 30,\r\n    \"price\": 22.3,\r\n    \"priceAfterDiscount\": 20,\r\n    \"description\": \"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.\",\r\n    \"category\": \"69763757c96fe9ed2ee5ce0e\",\r\n    \"imageCover\": \"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg\",\r\n    \"ratingsAverage\": 4.4,\r\n    \"ratingsQuantity\": 23\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/reviews/698b2b830d7b6bb899c9d773",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "reviews",
+                "698b2b830d7b6bb899c9d773"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update review",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\": \"1.5\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/reviews/69876a2aaf2af8b8c2dd971d",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "reviews",
+                "69876a2aaf2af8b8c2dd971d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product/Reviews",
+      "item": [
+        {
+          "name": "list reviews for specific product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/6978dbf950dd35e758828879/reviews",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "6978dbf950dd35e758828879",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list specific review for specific product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/6978dbf950dd35e758828879/reviews/69873cc604d8e1bf1ad515a3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "6978dbf950dd35e758828879",
+                "reviews",
+                "69873cc604d8e1bf1ad515a3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create review with only name",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"not bad\",\r\n    \"rating\": \"1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/products/6978dbf950dd35e758828879/reviews",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "products",
+                "6978dbf950dd35e758828879",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "wishList",
+      "item": [
+        {
+          "name": "add product to wishlist",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/wishLists",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "wishLists"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add product to wishlist Copy",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/wishLists/6978dbf950dd35e758828878",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "wishLists",
+                "6978dbf950dd35e758828878"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get loggedUser's wishList",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/wishLists",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "wishLists"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "item": [
+        {
+          "name": "add address",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"alias\": \"home\",\r\n    \"details\": \"jdhfjdh\",\r\n    \"phoneNumber\": \"+201004860225\",\r\n    \"city\": \"Dammieta\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/addresses",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "addresses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete address",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/addresses/698b4348d60e01cd03fd6f1d",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "addresses",
+                "698b4348d60e01cd03fd6f1d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get loggedUser's addresses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/addresses",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "addresses"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Coupon",
+      "item": [
+        {
+          "name": "create Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"HAPPY_EID!\",\r\n    \"expireDate\": \"03/3/2026\",\r\n    \"discount\": \"10\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list some Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list one Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/coupons/6977b08ff065df9f498994c0",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "coupons",
+                "6977b08ff065df9f498994c0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "newBrandii",
+                  "type": "text",
+                  "uuid": "ec7033fb-438d-4108-9d09-b5e793c2a694"
+                },
+                {
+                  "key": "imageUrl",
+                  "type": "file",
+                  "uuid": "314d9f79-f7e7-43c6-95a4-0c80bf25fac9",
+                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/coupons/697e1530fd7b1480f0cb1466",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "coupons",
+                "697e1530fd7b1480f0cb1466"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/coupons/6977b095f065df9f498994c2",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "coupons",
+                "6977b095f065df9f498994c2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cart",
+      "item": [
+        {
+          "name": "create cart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\",\r\n    \"quantity\": 3,\r\n    \"color\": \"purple\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get loggedUser cart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update product Quantity",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart/698c8291b1e003d875591fb3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart",
+                "698c8291b1e003d875591fb3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete item from cart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart/698c73ef6a5fa265de97fca5",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart",
+                "698c73ef6a5fa265de97fca5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete cart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Apply Coupon",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"coupon\": \"HAPPY_EID!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/cart/applyCoupon",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "cart",
+                "applyCoupon"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "order",
+      "item": [
+        {
+          "name": "create order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shippingAddress\": {\r\n        \"details\": \"jdhfjdh\",\r\n        \"phoneNumber\": \"+201004860225\",\r\n        \"city\": \"Dammieta\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get orders",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get specific order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders/698ce52426cc32c4e6cc159f",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders",
+                "698ce52426cc32c4e6cc159f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "strip checkout",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"shippingAddress\": {\r\n    \"city\": \"Dammieta\",\r\n    \"details\": \"DammietaDammietaDammieta\",\r\n    \"phone\": \"+201004860225\"\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders/checkout-session",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders",
+                "checkout-session"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update paid status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders/698ce52426cc32c4e6cc159f/pay",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders",
+                "698ce52426cc32c4e6cc159f",
+                "pay"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update delivery status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/Api/v1/orders/698ce52426cc32c4e6cc159f/delivry",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "Api",
+                "v1",
+                "orders",
+                "698ce52426cc32c4e6cc159f",
+                "delivry"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
