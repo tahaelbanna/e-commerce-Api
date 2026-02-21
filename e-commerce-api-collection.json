@@ -28,21 +28,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "value": "produc1232146565reew",
-                  "type": "text",
-                  "uuid": "097490fb-45d2-467b-892e-0b36a0495639"
-                },
-                {
-                  "key": "imageUrl",
-                  "type": "file",
-                  "uuid": "d48a35f3-ebd4-4b28-b85f-f26220a32686",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
-                  "disabled": true
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/categories",
@@ -114,7 +100,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Rental 00\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -192,7 +178,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"LOL\",\r\n    \"category\": \"69763736c96fe9ed2ee5ce06\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -329,7 +315,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Stairs\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -374,20 +360,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "value": "newBrand1",
-                  "type": "text",
-                  "uuid": "85e95537-b63b-4ba8-bc77-336f12a23cc5"
-                },
-                {
-                  "key": "imageUrl",
-                  "type": "file",
-                  "uuid": "a97f75d1-348c-4c43-a707-9cdb26ee01a0",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/brands",
@@ -459,20 +432,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "value": "newBrandii",
-                  "type": "text",
-                  "uuid": "ec7033fb-438d-4108-9d09-b5e793c2a694"
-                },
-                {
-                  "key": "imageUrl",
-                  "type": "file",
-                  "uuid": "314d9f79-f7e7-43c6-95a4-0c80bf25fac9",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/brands/697e1530fd7b1480f0cb1466",
@@ -541,54 +501,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "title",
-                  "value": "newProduct",
-                  "type": "text",
-                  "uuid": "75155ef5-8357-4b02-801a-ba80466526a4"
-                },
-                {
-                  "key": "description",
-                  "value": "newProductnewProductnewProductnewProductnewProductnewProductnewProductnewProductnewProduct",
-                  "type": "text",
-                  "uuid": "17b2c80b-5b02-440b-b0d1-1f0979d0fccb"
-                },
-                {
-                  "key": "quantity",
-                  "value": "12",
-                  "type": "text",
-                  "uuid": "fea3cb08-7991-489c-8fb4-b31eaa44c4ae"
-                },
-                {
-                  "key": "price",
-                  "value": "12",
-                  "type": "text",
-                  "uuid": "910ac5e8-57f8-48b4-a849-272c26a4f935"
-                },
-                {
-                  "key": "imageCover",
-                  "type": "file",
-                  "uuid": "141c91d7-5845-49fa-8d4b-ea4af0673403",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
-                },
-                {
-                  "key": "images",
-                  "type": "file",
-                  "uuid": "b9be160e-38d0-47cf-a379-1a10ea80f299",
-                  "src": [
-                    "/C:/Taha Elbanna/My/Taha Elbanna-photo.jpg",
-                    "/C:/Taha Elbanna/My/uni card.jpg",
-                    "/C:/Taha Elbanna/My/بطاقة.jpg"
-                  ]
-                },
-                {
-                  "key": "category",
-                  "value": "697e302b264e32baf473ba69",
-                  "type": "text",
-                  "uuid": "7d09aee2-6d70-4ff8-b10e-7d100a8cb1ac"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/products",
@@ -703,14 +616,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "images",
-                  "type": "file",
-                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/products/697e421396ad92bf94f94d90",
@@ -813,21 +719,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "profileImage",
-                  "type": "file",
-                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
-                  "disabled": true
-                },
-                {
-                  "key": "name",
-                  "value": "teto",
-                  "type": "text",
-                  "uuid": "ea33c738-a09d-4c72-bb2a-360eda07d6bc"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/users/updateMe",
@@ -874,7 +766,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"password\": \"123456789\",\r\n    \"confirmPassword\": \"123456789\",\r\n    \"currentPassword\": \"12345678\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -952,44 +844,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "value": "Taha",
-                  "type": "text",
-                  "uuid": "75155ef5-8357-4b02-801a-ba80466526a4"
-                },
-                {
-                  "key": "email",
-                  "value": "taha4@gmail.com",
-                  "type": "text",
-                  "uuid": "17b2c80b-5b02-440b-b0d1-1f0979d0fccb"
-                },
-                {
-                  "key": "password",
-                  "value": "@taha12@!!!",
-                  "type": "text",
-                  "uuid": "fea3cb08-7991-489c-8fb4-b31eaa44c4ae"
-                },
-                {
-                  "key": "phoneNumber",
-                  "value": "+201004860225",
-                  "type": "text",
-                  "uuid": "910ac5e8-57f8-48b4-a849-272c26a4f935"
-                },
-                {
-                  "key": "profileImage",
-                  "type": "file",
-                  "uuid": "4b13bb4b-242e-4098-a215-7458d3d0e546",
-                  "src": "/C:/Taha Elbanna/My/uni card.jpg"
-                },
-                {
-                  "key": "confirmPassword",
-                  "value": "@taha12@!!!",
-                  "type": "text",
-                  "uuid": "1490aa1e-c1d8-4cbe-bc61-73c51de0e006"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/users",
@@ -1124,21 +979,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "profileImage",
-                  "type": "file",
-                  "uuid": "db978b1f-cbe0-44d0-834f-0e9e057a3a6d",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg",
-                  "disabled": true
-                },
-                {
-                  "key": "name",
-                  "value": "teto",
-                  "type": "text",
-                  "uuid": "ea33c738-a09d-4c72-bb2a-360eda07d6bc"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/users/697f704591f3388bd2698e1b",
@@ -1172,7 +1013,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"password\": \"tahaElbanna1\",\r\n    \"confirmPassword\": \"tahaElbanna1\",\r\n    \"currentPassword\": \"tahaElbanna\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1254,7 +1095,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"pass1234\",\r\n    \"confirmPassword\": \"pass1234\",\r\n    \"phoneNumber\": \"+201004860225\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1296,7 +1137,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"pass1234\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1338,7 +1179,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"elbannataha@gmail.com\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1380,7 +1221,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"resetCode\": \"249322\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1422,7 +1263,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"elbannataha@gmail.com\",\r\n    \"newPassword\": \"12345678\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1466,32 +1307,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "title",
-                  "value": "not good & not bad",
-                  "type": "text",
-                  "uuid": "a7404270-e9c7-413a-bede-11ac22f30f8a"
-                },
-                {
-                  "key": "rating",
-                  "value": "2",
-                  "type": "text",
-                  "uuid": "1d7cfa67-4d66-48ad-a35c-f13499923a36"
-                },
-                {
-                  "key": "user",
-                  "value": "6984f2fcac0f5f1f75c898a1",
-                  "type": "text",
-                  "uuid": "d102276c-d474-43c3-9c19-4a612feff472"
-                },
-                {
-                  "key": "product",
-                  "value": "6978dbf950dd35e758828879",
-                  "type": "text",
-                  "uuid": "6262957c-5b60-44eb-aac8-cb2b43fb70ee"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/reviews",
@@ -1640,7 +1456,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"rating\": \"1.5\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1727,7 +1543,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"title\": \"not bad\",\r\n    \"rating\": \"1\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1772,7 +1588,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1883,7 +1699,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"alias\": \"home\",\r\n    \"details\": \"jdhfjdh\",\r\n    \"phoneNumber\": \"+201004860225\",\r\n    \"city\": \"Dammieta\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1994,7 +1810,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"HAPPY_EID!\",\r\n    \"expireDate\": \"03/3/2026\",\r\n    \"discount\": \"10\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2091,20 +1907,7 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "value": "newBrandii",
-                  "type": "text",
-                  "uuid": "ec7033fb-438d-4108-9d09-b5e793c2a694"
-                },
-                {
-                  "key": "imageUrl",
-                  "type": "file",
-                  "uuid": "314d9f79-f7e7-43c6-95a4-0c80bf25fac9",
-                  "src": "/C:/Taha Elbanna/My/بطاقة.jpg"
-                }
-              ]
+              "formdata": []
             },
             "url": {
               "raw": "{{baseURL}}/Api/v1/coupons/697e1530fd7b1480f0cb1466",
@@ -2173,7 +1976,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"productId\": \"6978dbf950dd35e758828878\",\r\n    \"quantity\": 3,\r\n    \"color\": \"purple\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2240,7 +2043,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"quantity\": 5\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2338,7 +2141,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"coupon\": \"HAPPY_EID!\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2382,7 +2185,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"shippingAddress\": {\r\n        \"details\": \"jdhfjdh\",\r\n        \"phoneNumber\": \"+201004860225\",\r\n        \"city\": \"Dammieta\"\r\n    }\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
